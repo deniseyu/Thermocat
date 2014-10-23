@@ -87,6 +87,5 @@ $.getJSON('/weather', function(data) {
     $('#catpic').attr('src', '/images/orange_cat.png');
   });
 
-
 });
 

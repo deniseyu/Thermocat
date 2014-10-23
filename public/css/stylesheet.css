@@ -2,7 +2,7 @@ body {
   text-align: center;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: 'Covered By Your Grace', cursive;
 }
 
@@ -41,15 +41,11 @@ section.cat {
 }
 
 section.text {
+  margin-top: -8%;
   vertical-align: top;
   padding-top: 10%;
   display: inline-block;
 }
-
-/*div.menu {
-  background-color: brown;
-  opacity: .5;
-*/
 
 main.errrthing {
   padding: 5%;
@@ -58,6 +54,14 @@ main.errrthing {
 img.print {
   width: 50px;
   height: 50px;
+}
+
+img.print:hover {
+  cursor: pointer;
+}
+
+img.adust:hover {
+  cursor: pointer;
 }
 
 #cat_body {
