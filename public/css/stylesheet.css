@@ -18,6 +18,10 @@ h2 {
   padding-bottom: 5%;
 }
 
+h2.powersavestatus {
+  color: #80CC5E;
+}
+
 h3 {
   font-size: 2em;
   padding-bottom: 5%;
@@ -70,8 +74,11 @@ main.errrthing {
   width: 30px;
   height: 25px;
   border-radius: 50%;
-  background-color: yellow;
   position: absolute;
+}
+
+div.eyes {
+  background-color: #FFC337;
 }
 
 #pupil {

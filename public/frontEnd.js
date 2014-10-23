@@ -2,14 +2,8 @@ $(document).ready(function(){
   
   var thermocat = new Thermocat;
 
-// $('h3').text(
-//     $.getJSON('/weather', function(data) {
-//       console.log(data['list'][1]['main']['temp'])
-//     });
-// );
-
 $.getJSON('/weather', function(data) {
-    $('h3').text('outside temperature: ' + data['list'][1]['main']['temp'] + '°C')
+    $('h3').text('outside temperature: ' + (parseInt(data['list'][1]['main']['temp'])) + '°C')
 });
 
   function ThermocatView(element) {
@@ -27,25 +21,20 @@ $.getJSON('/weather', function(data) {
     });
   };
 
-  ;
-
   $('h1').text(thermocat.temperature + '°C');
 
   $('h2.increase').on('click', function(){
     thermocat.increaseTemperature();
     $('h1').text(thermocat.temperature + '°C');
-    $('#right_eye').css('background-color', 'yellow');
+    $('div.eyes').css('background-color', '#FFC337');
     if (thermocat.temperature >= 25) {
-      $('#right_eye').css('background-color', 'red');
-      $('#left_eye').css('background-color', 'red');
+      $('div.eyes').css('background-color', '#FF4B37');
     };
     if (thermocat.temperature < 25) {
-      $('#right_eye').css('background-color', 'yellow');
-      $('#left_eye').css('background-color', 'yellow');
+      $('div.eyes').css('background-color', '#FFC337');
     };
     if (thermocat.temperature <= 18) {
-      $('#right_eye').css('background-color', 'green');
-      $('#left_eye').css('background-color', 'green');
+      $('div.eyes').css('background-color', '#80CC5E');
     };
 
   });
@@ -54,40 +43,36 @@ $.getJSON('/weather', function(data) {
     thermocat.decreaseTemperature();
     $('h1').text(thermocat.temperature + '°C');
     if (thermocat.temperature >= 25) {
-      $('#right_eye').css('background-color', 'red');
-      $('#left_eye').css('background-color', 'red');
+      $('div.eyes').css('background-color', '#FF4B37');
     };
     if (thermocat.temperature < 25) {
-      $('#right_eye').css('background-color', 'yellow');
-      $('#left_eye').css('background-color', 'yellow');
+      $('div.eyes').css('background-color', '#FFC337');
     };
     if (thermocat.temperature <= 18) {
-      $('#right_eye').css('background-color', 'green');
-      $('#left_eye').css('background-color', 'green');
+      $('div.eyes').css('background-color', '#80CC5E');
     };
   });
 
   $('h2.reset').on('click', function(){
     thermocat.resetTemperature();
     $('h1').text(thermocat.temperature + '°C');
-    $('#right_eye').css('background-color', 'yellow');
-    $('#left_eye').css('background-color', 'yellow');
+    $('div.eyes').css('background-color', '#FFC337');
   });
 
   $('h2.turnoffpowersave').on('click', function() {
     thermocat.turnOffPowerSave();
     $('h1').text(thermocat.temperature + '°C')
     $('h2.powersavestatus').text('Power save mode is off');
-    $('#right_eye').css('background-color', 'yellow');
-    $('#left_eye').css('background-color', 'yellow');
+    $('h2.powersavestatus').css('color', '#FF4B37');
+    $('div.eyes').css('background-color', '#FFC337');
   });
 
   $('h2.turnonpowersave').on('click', function(){
     thermocat.turnOnPowerSave();
     $('h1').text(thermocat.temperature + '°C')
     $('h2.powersavestatus').text('Power save mode is on');
-    $('#right_eye').css('background-color', 'yellow');
-    $('#left_eye').css('background-color', 'yellow');
+    $('h2.powersavestatus').css('color', '#80CC5E');
+    $('div.eyes').css('background-color', '#FFC337');
   });
 
 });
