@@ -2,6 +2,16 @@ $(document).ready(function(){
   
   var thermocat = new Thermocat;
 
+// $('h3').text(
+//     $.getJSON('/weather', function(data) {
+//       console.log(data['list'][1]['main']['temp'])
+//     });
+// );
+
+$.getJSON('/weather', function(data) {
+    $('h3').text('outside temperature: ' + data['list'][1]['main']['temp'] + '°C')
+});
+
   function ThermocatView(element) {
     this.el = $(element);
     this.thermocat = new Thermocat;
