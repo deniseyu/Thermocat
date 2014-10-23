@@ -75,5 +75,18 @@ $.getJSON('/weather', function(data) {
     $('div.eyes').css('background-color', '#FFC337');
   });
 
+  $('#blackpaw').on('click', function(){
+    $('#catpic').attr('src', '/images/cat.png');
+  });
+
+  $('#graypaw').on('click', function(){
+    $('#catpic').attr('src', '/images/gray_cat.png');
+  });
+
+  $('#orangepaw').on('click', function(){
+    $('#catpic').attr('src', '/images/orange_cat.png');
+  });
+
+
 });
 

@@ -20,6 +20,7 @@ h2 {
 
 h2.powersavestatus {
   color: #80CC5E;
+  font-size: 1.5em;
 }
 
 h3 {
@@ -52,6 +53,11 @@ section.text {
 
 main.errrthing {
   padding: 5%;
+}
+
+img.print {
+  width: 50px;
+  height: 50px;
 }
 
 #cat_body {
