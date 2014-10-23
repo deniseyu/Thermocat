@@ -2,17 +2,21 @@ body {
   text-align: center;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Covered By Your Grace', cursive;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 1.5em;
 }
 
 h2 {
   display: inline-block;
   padding-top: 1%;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 section.cat {

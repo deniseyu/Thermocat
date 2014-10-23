@@ -19,11 +19,11 @@ $(document).ready(function(){
 
   // ;
 
-  $('h1').text(thermocat.temperature + '°C');
+  $('h1').text('The inside temperature is: ' + thermocat.temperature + '°C');
 
   $('h2.increase').on('click', function(){
     thermocat.increaseTemperature();
-    $('h1').text(thermocat.temperature + '°C');
+    $('h1').text('The inside temperature is: ' + thermocat.temperature + '°C');
     $('#right_eye').css('background-color', 'yellow');
     if (thermocat.temperature >= 25) {
       $('#right_eye').css('background-color', 'red');
@@ -42,7 +42,7 @@ $(document).ready(function(){
 
   $('h2.decrease').on('click', function(){
     thermocat.decreaseTemperature();
-    $('h1').text(thermocat.temperature + '°C');
+    $('h1').text('The inside temperature is: ' + thermocat.temperature + '°C');
     if (thermocat.temperature >= 25) {
       $('#right_eye').css('background-color', 'red');
       $('#left_eye').css('background-color', 'red');
@@ -59,14 +59,14 @@ $(document).ready(function(){
 
   $('h2.reset').on('click', function(){
     thermocat.resetTemperature();
-    $('h1').text(thermocat.temperature + '°C');
+    $('h1').text('The inside temperature is: ' + thermocat.temperature + '°C');
     $('#right_eye').css('background-color', 'yellow');
     $('#left_eye').css('background-color', 'yellow');
   });
 
   $('h2.turnoffpowersave').on('click', function() {
     thermocat.turnOffPowerSave();
-    $('h1').text(thermocat.temperature + '°C')
+    $('h1').text('The inside temperature is: ' + thermocat.temperature + '°C')
     $('h2.powersavestatus').text('Power save mode is off');
     $('#right_eye').css('background-color', 'yellow');
     $('#left_eye').css('background-color', 'yellow');
@@ -74,7 +74,7 @@ $(document).ready(function(){
 
   $('h2.turnonpowersave').on('click', function(){
     thermocat.turnOnPowerSave();
-    $('h1').text(thermocat.temperature + '°C')
+    $('h1').text('The inside temperature is: ' + thermocat.temperature + '°C')
     $('h2.powersavestatus').text('Power save mode is on');
     $('#right_eye').css('background-color', 'yellow');
     $('#left_eye').css('background-color', 'yellow');
@@ -83,7 +83,7 @@ $(document).ready(function(){
     $.getJSON("http://api.openweathermap.org/data/2.5/find?q=London&units=metric", function(data) { 
     var currentWeather = (data['list'][1]['main']['temp']);
     console.log('hello')
-    $('.text h3').text(currentWeather)
+    $('.text h3').text('The temperature outside is: ' + currentWeather + '°C')
   });
 
 });

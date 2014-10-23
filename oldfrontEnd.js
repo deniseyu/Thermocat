@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   $.getJSON("http://api.openweathermap.org/data/2.5/find?q=London&units=metric", function(data) { 
     var currentWeather = (data['list'][1]['main']['temp']);
-    $('.text h3').text(currentWeather)
+    $('h3').text('meow');
   });
 
 
