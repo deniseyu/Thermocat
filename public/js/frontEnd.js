@@ -2,22 +2,22 @@ $(document).ready(function(){
   
   var thermocat = new Thermocat;
 
-  function ThermocatView(element) {
-    this.el = $(element);
-    this.thermocat = new Thermocat;
-    this.el.text(this.thermocat.temperature);
-    this.bindTo('.increase', this.thermocat, this.thermocat.increaseTemperature);
-    this.bindTo('.decrease', this.thermocat, this.thermocat.decreaseTemperature);
-    this.bindTo('.reset', this.thermocat, this.thermocat.resetTemperature);
-  };
+  // function ThermocatView(element) {
+  //   this.el = $(element);
+  //   this.thermocat = new Thermocat;
+  //   this.el.text(this.thermocat.temperature);
+  //   this.bindTo('.increase', this.thermocat, this.thermocat.increaseTemperature);
+  //   this.bindTo('.decrease', this.thermocat, this.thermocat.decreaseTemperature);
+  //   this.bindTo('.reset', this.thermocat, this.thermocat.resetTemperature);
+  // };
 
-  ThermocatView.prototype.bindTo = function(selector, obj, func) {
-    $(selector).on('click', function(){
-      $('h1').text(func.call(obj))
-    });
-  };
+  // ThermocatView.prototype.bindTo = function(selector, obj, func) {
+  //   $(selector).on('click', function(){
+  //     $('h1').text(func.call(obj))
+  //   });
+  // };
 
-  ;
+  // ;
 
   $('h1').text(thermocat.temperature + '°C');
 
@@ -78,6 +78,12 @@ $(document).ready(function(){
     $('h2.powersavestatus').text('Power save mode is on');
     $('#right_eye').css('background-color', 'yellow');
     $('#left_eye').css('background-color', 'yellow');
+  });
+
+    $.getJSON("http://api.openweathermap.org/data/2.5/find?q=London&units=metric", function(data) { 
+    var currentWeather = (data['list'][1]['main']['temp']);
+    console.log('hello')
+    $('.text h3').text(currentWeather)
   });
 
 });
