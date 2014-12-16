@@ -1,3 +1,4 @@
+[![Code Climate](https://codeclimate.com/github/deniseyu/Thermocat/badges/gpa.svg)](https://codeclimate.com/github/deniseyu/Thermocat)
 # Thermocat
 
 Week 6 project: Build a thermostat web application using javascript with jQuery and Handlebar templates.
