@@ -17,6 +17,20 @@ The thermocat must have the following specifications:
 
 ![meow](https://raw.github.com/deniseyu/thermocat/master/public/screenshot.png)
 
+## To Run
+
+Clone the repository:
+```
+git clone git@github.com:deniseyu/Thermocat.git
+cd Thermocat
+```
+To start server:
+```
+bundle install
+rackup
+```
+To run tests, open SpecRunner.html in a browser.
+
 ## Technologies
 
 * Javascript
