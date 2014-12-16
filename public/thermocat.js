@@ -1,5 +1,5 @@
 function Thermocat() {
-	this.temperature = 20;
+  this.temperature = 20;
   this.isPowerSaveMode = true;
   this.color = 'yellow';
   this.type = 'cat';
@@ -15,25 +15,25 @@ Thermocat.prototype.increaseTemperatureBy = function(degrees) {
   if (this.temperature === this.maximumTemperature) {
     return this.maximumTemperature;
   } else {
-    return this.temperature = this.temperature + degrees;
+    return this.temperature += degrees;
   }
-}
+};
 
 Thermocat.prototype.decreaseTemperature = function() {
 	return this.decreaseTemperatureBy(1);
-}
+};
 
 Thermocat.prototype.decreaseTemperatureBy = function(degrees) {
   if (this.temperature === this.minimumTemperature) {
   	return this.minimumTemperature;
   } else {
-    return this.temperature = this.temperature - degrees;
+    return this.temperature -= degrees;
   }
-}
+};
 
 Thermocat.prototype.resetTemperature = function() {
   return this.temperature = 20;
-}
+};
 
 Thermocat.prototype.changeColor = function () {
   if (this.temperature <= 18) {
@@ -45,16 +45,16 @@ Thermocat.prototype.changeColor = function () {
   if (this.temperature >= 25) {
   	this.color = 'red';
   }
-}
+};
 
 Thermocat.prototype.turnOffPowerSave = function() {
   this.resetTemperature();
 	this.isPowerSaveMode = false;
 	this.maximumTemperature = 32;
-}
+};
 
 Thermocat.prototype.turnOnPowerSave = function() {
   this.resetTemperature();
   this.isPowerSaveMode = true;
   this.maximumTemperature = 25;
-}
+};
